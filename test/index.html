@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="body">
+      <h1>Hello World</h1>
+    </div>
+    <script src="../build/build.js"></script>
+    <script>
+      var domify = require('domify');
+      var modal  = require('modal');
+
+      var element = domify('<form><button class="btn">Confirm</button></form>');
+
+      setTimeout(function() {
+        modal.title('Test Form').insert(element).open();
+
+        setTimeout(function() {
+          modal.close();
+        }, 5000);
+      }, 5000);
+    </script>
+  </body>
+</html>

@@ -30,9 +30,6 @@
   ],
 
   "development": {
-    "scripts": [
-      "test/index.js"
-    ],
     "dependencies": {
       "component/assert": "*"
     }

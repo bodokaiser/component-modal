@@ -2,7 +2,7 @@ SHELL := /bin/bash
 PATH  := node_modules/.bin:$(PATH)
 
 test: build
-	@mochify --reporter spec ./build/build.js
+	@open test/index.html
 
 build:
 	@component install --dev
@@ -11,4 +11,4 @@ build:
 clean:
 	@rm -rf build components node_modules
 
-.PHONY: build test clean
+.PHONY: build clean
