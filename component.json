@@ -1,0 +1,43 @@
+{
+
+  "name": "modal",
+
+  "version": "0.0.1",
+
+  "license": "MIT",
+
+  "keywords": [
+    "twbs",
+    "modal",
+    "overlay",
+    "bootstrap",
+    "twitter-bootstrap"
+  ],
+
+  "repository": "bodokaiser/component-modal",
+
+  "description": "jQuery-less implementation of twbs modals.",
+
+  "main": "lib/index.js",
+
+  "scripts": [
+    "lib/index.js",
+    "lib/modal/index.js"
+  ],
+
+  "templates": [
+    "lib/modal/modal.html"
+  ],
+
+  "development": {
+    "component/assert": "*"
+  },
+
+  "dependencies": {
+    "component/query": "*",
+    "component/domify": "*",
+    "component/emitter": "*",
+    "bodokaiser/component-replace": "*"
+  }
+
+}
