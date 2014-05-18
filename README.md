@@ -12,8 +12,11 @@ jQuery-less implementation of twbs modals.
     element.innerHTML = '<p class="alert alert-danger">Really?</p>';
     element.innerHTML = '<button class="btn btn-danger">Confirm</button>';
 
-    // now lets open our modal
-    modal(element).open();
+    // lets insert our element
+    modal.insert(element);
+    // now render it to the user
+    modal.open();
+
 
 ## Install
 
@@ -21,64 +24,52 @@ Preferable with [component](https://github.com/component/component)
 
     $ component install bodokaiser/component-modal
 
-else with [npm](https://github.com/npmjs/npm)
-
-    $ npm install bodokaiser-modal
-
 ## Documentation
 
-### modal(element[, options])
+The `modal` module will manage a singleton instance of `Modal` for you.
+This is done in favor of creating instances yourself as you will get
+problems cleaning them up from time to time as they else will remain in
+the document body.
 
-Wraps an element into an instance of `modal.Modal`. Shortcut for:
-
-    document.body.append(new modal.Modal(options).insert(element));
-
-Will return an instance of `modal.Modal` in the end where `options` can have
-following properties:
-
-- `closable`, if set to `false` the modal will have no close button.
-- `insert`, if set to `false` the modal will not be inserted into the `body`.
-- `title`, sets the modals title to the assigned string.
-
-#### modal.element
+### modal.element
 
 The `HTMLElement` of the modal for direct access or manuel insertion into the
 `document.body`.
 
-#### modal.open()
+### modal.open()
 
 Updates the modal classes to fade into the screen.
 
-#### modal.close()
+### modal.close()
 
 Updated the modal classes to fade out of the screen.
 
-#### modal.title(title)
+### modal.title(title)
 
 Sets the `.modal-title` of the modal to `title`.
 
-#### modal.insert(element)
+### modal.insert(element)
 
 Inserts the provided `element` into the modal. The element must not have any
 modal related markdown this is all handled by the modal itself. However
 you should note that some elements are not rendered probably when they do not
 have a specified height.
 
-#### modal.remove()
+### modal.remove()
 
 Removes the modal from the document. You can reuse a modal instance by using
 `modal.insert(element)` however you can also just remove it and recreate when
 required.
 
-#### Event: "opened"
+### Event: "opened"
 
 Emitted after a `modal.open()`.
 
-#### Event: "closed"
+### Event: "closed"
 
 Emitted after a `modal.close()`.
 
-#### Event: "close"
+### Event: "close"
 
 Emitted after a click on the close button.
 
