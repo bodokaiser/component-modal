@@ -30,14 +30,19 @@
   ],
 
   "development": {
-    "component/assert": "*"
+    "scripts": [
+      "test/index.js"
+    ],
+    "dependencies": {
+      "component/assert": "*"
+    }
   },
 
   "dependencies": {
-    "component/query": "*",
-    "component/domify": "*",
-    "component/emitter": "*",
-    "bodokaiser/component-replace": "*"
+    "component/query": "^0.0.3",
+    "component/domify": "^1.2.2",
+    "component/emitter": "^1.1.2",
+    "bodokaiser/component-replace": "^1.1.0"
   }
 
 }

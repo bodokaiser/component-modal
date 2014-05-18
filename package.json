@@ -30,7 +30,9 @@
   },
 
   "devDependencies": {
-    "component": "^0.19.9"
+    "component": "^1.0.0",
+    "mochify": "^0.9.0",
+    "mocha": "^1.19.0"
   },
 
   "repository": {
