@@ -24,6 +24,10 @@ Preferable with [component](https://github.com/component/component)
 
     $ component install bodokaiser/component-modal
 
+should also work with [npm](https://github.com/npm/npm) *not tested*
+
+    $ npm install --save bodokaiser-modal
+
 ## Documentation
 
 The `modal` module will manage a singleton instance of `Modal` for you.
