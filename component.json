@@ -2,7 +2,7 @@
 
   "name": "modal",
 
-  "version": "0.0.5",
+  "version": "0.0.6",
 
   "license": "MIT",
 
@@ -39,7 +39,7 @@
     "component/query": "^0.0.3",
     "component/domify": "^1.2.2",
     "component/emitter": "^1.1.2",
-    "bodokaiser/component-replace": "^1.1.0"
+    "bodokaiser/component-replace": "^1.1.1"
   }
 
 }
